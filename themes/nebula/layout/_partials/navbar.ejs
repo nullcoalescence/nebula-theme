@@ -1,0 +1,14 @@
+<nav class="navbar">
+
+    <a href="javascript:void(0);" class="navbar--open" onclick="toggleNav()">&#9776; Menu</button>
+    
+    <a class="navbar--title" href="/"><%= theme.title %></a>
+
+</nav>
+
+<span id="navbar--content" class="navbar--content">
+    <a style="text-align: center;" href="javascript:void(0);" class="navbar--link" onclick="toggleNav()">&times;</a>
+    <% for (var i in theme.navbar_links) { %>
+        <a class="navbar--link" href="<%- url_for(theme.navbar_links[i]) %>"><%= i %></a>
+    <% } %>
+</span>

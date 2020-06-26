@@ -1,0 +1,11 @@
+<% if (theme.comments_enabled) { %>
+    <h1>Comments</h1>
+    <script src="https://utteranc.es/client.js"
+            repo="<%= theme.comments_repo %>"
+            issue-term="<%= theme.comments_issue_term %>"
+            label="<%= theme.comments_label %>"
+            theme="<%= theme.comments_theme %>"
+            crossorigin="anonymous"
+            async>
+    </script>
+<% } %>

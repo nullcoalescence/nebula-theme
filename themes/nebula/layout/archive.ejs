@@ -1,0 +1,11 @@
+<h2>Archives</h2>
+
+<div class="archives-list">
+    <ul>
+        <% page.posts.each(function(post) { %>
+            <li>
+                <%- partial("_partials/archive_post.ejs", { article: post }); %>
+            </li>
+        <% }) %>
+    </ul>
+</div>

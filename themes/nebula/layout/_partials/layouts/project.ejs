@@ -1,0 +1,28 @@
+<div class="post">
+    <div class="post-top" id="post-top">
+        <h1 class="post-top--title"><%= page.title %></h1>
+        <h2 class="post-top--subtitle"><%= page.subtitle %></h2>
+        <h3 class="post-top--source-url">Source: <a class="mono-font" href="<%= page.source_url %>"><%= page.source_url %></a></h3>
+        
+    </div>
+    
+    <hr class="post-divider">
+    
+    <div class="post-content">
+        <%- page.content %>
+    </div>
+    
+    <hr class="post-divider">
+    
+    <div id="share" class="post-share">
+        <%- partial("_partials/share.ejs") %>
+    </div>
+    
+    <div id="comments" class="post-comments">
+        <%- partial("_partials/comments.ejs") %>
+    </div>
+    
+    <div id="footer" class="post-footer">
+        <%- partial("_partials/post_footer.ejs") %>
+    </div>
+</div>

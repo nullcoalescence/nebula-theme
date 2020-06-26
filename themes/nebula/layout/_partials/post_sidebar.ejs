@@ -1,0 +1,18 @@
+<div id="post-sidebar" class="post-sidebar">
+    <p>
+        <%- partial("_partials/post_tags.ejs") %>
+    </p>
+
+    <p>
+        <%- partial("_partials/post_categories.ejs") %>
+    </p>
+
+    <p>
+        <h3>Jump to</h3>
+        <h4><a href="javascript:jumpTo('#post-top');">Top</a></h4>
+        <ul id="post-sidebar--post-headers" class="post-sidebar--post-headers">
+            <!-- Javascript injects post headers into here for quick navigation-->
+        </ul>
+        <h4><a href="javascript:jumpTo('#post-bottom');">Comments</a></h4>
+    </p>
+</div>  

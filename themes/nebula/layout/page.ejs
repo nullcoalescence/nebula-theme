@@ -1,0 +1,12 @@
+<div class="page-content">
+    <div class="post-top" id="post-top"> <!-- Code borrowed from post.ejs -->
+        <h1 class="post-top--title"><%= page.title %></h1>
+        <h2 class="post-top--subtitle"><%= page.subtitle %></h2>
+        <% if (page.author) { %> posted by <%= page.author %> <% } %>
+        <% if (page.date) { %> on <%= page.date.format(config.date_format) %> <% } %>
+    </div>
+
+    <hr class="post-divider">
+
+    <%- page.content %>
+</div>

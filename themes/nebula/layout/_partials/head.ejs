@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="<%= theme.meta_theme_color %>"> 
+<meta name="author" content="<%= config.author %>">  
+<meta name="description" content="<%= config.description %>"> 
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<% if (theme.favicon_path) { %><%- favicon_tag(theme.favicon_path) %><% } %>
+<title><%= theme.global_title %></title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn&family=Courier+Prime&display=swap">
+
+<% if (theme.hljs_theme_local) { %>
+    <%- css(theme.hljs_theme_local) %>
+<% } %>
+
+<% if (theme.hljs_theme_url) { %>
+    <link rel="stylesheet" href="<%= theme.hljs_theme_url %>">
+<% } %>
+
+<%- css("css/normalize.min.css") %>
+<%- css("css/styles.css") %>
+<%- partial("_partials/google_analytics.ejs") %>
