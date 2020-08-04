@@ -4,13 +4,14 @@
         <%- partial("_partials/landing_page.ejs") %>
     </div>
 
+    <h1>Blog</h1>
     <ul>
         <% page.posts.each(function(post) { %> 
-            
+        
             <li>
                 <%- partial("_partials/article_item.ejs", { article: post }) %>
             </li>
-        
+    
         <% }) %>
     </ul>
 

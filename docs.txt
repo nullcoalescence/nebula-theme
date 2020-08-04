@@ -1,0 +1,3 @@
+new download page:
+1) hexo new page --path downloads/test-download "Title"
+2) set layout: download

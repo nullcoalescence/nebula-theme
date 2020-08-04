@@ -1,30 +1,28 @@
-<div class="post">
-    <div class="post-top" id="post-top">
-        <h1 class="post-top--title"><%= page.title %></h1>
-        <h2 class="post-top--subtitle"><%= page.subtitle %></h2>
-        <% if (page.author) { %> posted by <%= page.author %> <% } %>
-        <% if (page.date) { %> on <%= page.date.format(config.date_format) %> <% } %>
-    </div>
-    
-    <hr class="post-divider">
-    
-    <%- partial("_partials/post_sidebar.ejs") %>
-    
-    <div class="post-content">
-        <%- page.content %>
-    </div>
-    
-    <hr class="post-divider">
-    
-    <div id="share" class="post-share">
-        <%- partial("_partials/share.ejs") %>
-    </div>
-    
-    <div id="comments" class="post-comments">
-        <%- partial("_partials/comments.ejs") %>
-    </div>
-    
-    <div id="footer" class="post-footer">
-        <%- partial("_partials/post_footer.ejs") %>
-    </div>
+<div class="post-top">
+    <h1 class="post-top--title"><%= page.title %></h1>
+    <h2 class="post-top--subtitle"><%= page.subtitle %></h2>
+    <% if (page.author) { %> posted by <%= page.author %> <% } %>
+    <% if (page.date) { %> on <%= page.date.format(config.date_format) %> <% } %>
+</div>
+
+<hr class="post-divider">
+
+<%- partial("_partials/post_sidebar.ejs") %>
+
+<div class="post-content">
+    <%- page.content %>
+</div>
+
+<hr class="post-divider">
+
+<div id="share" class="post-share">
+    <%- partial("_partials/share.ejs") %>
+</div>
+
+<div id="comments" class="post-comments">
+    <%- partial("_partials/comments.ejs") %>
+</div>
+
+<div id="footer" class="post-footer">
+    <%- partial("_partials/post_footer.ejs") %>
 </div>

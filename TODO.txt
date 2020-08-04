@@ -1,0 +1,18 @@
+- index
+    - built in landing page/thing at top before posts
+    - image support
+
+- images
+    - popouts
+
+- fonts
+
+- archives
+
+- some form of font icons
+
+- finish? download page
+- project page
+
+- documentation
+- node project (currently dependancies are in site)

@@ -8,10 +8,12 @@
 
     <p class="article--meta">
         <% if (article.date) {%>
-            <span class="alt-font">posted on</span> <%= article.date.format(config.date_format) %> 
+            <i class="icofont-calendar"></i>
+            <span class="alt-font">posted on</span> <%= article.date.format(config.date_format) %>
         <% } %>
+        <br>
         <% if (article.author) { %>
-            <span class="alt-font"> by </span> <%- article.author %></span>
+            <span class="alt-font"><i class="icofont-pencil"></i>by </span> <%- article.author %></span>
         <% } %>
     </p>
 

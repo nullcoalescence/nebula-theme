@@ -2,18 +2,17 @@
 # nebula _config.yml
 # =================================
 
-
 # Theme for highlight.js
 # Include ONE OR THE OTHER - a local theme, or a theme hosted on a CDN
 hljs_theme_local: "css/an_old_hope_hljs_local.css" # Path starts at /source/, so if you drop theme in source/css, the path looks like "css/theme.css"
 hljs_theme_url: "http://jmblog.github.com/color-themes-for-highlightjs/css/themes/tomorrow.css" # Url (http://jmblog.github.com/color-themes-for-highlightjs/css/themes/tomorrow.css) 
 
-# Site titel
+# Site title
 site_title: "example.com"
 meta_theme_color:
 favicon_path:
 global_title: Title
-google_analytics_tracking_id: 
+google_analytics_tracking_id:
 
 # Links for navbar
 navbar_links:

@@ -1,13 +1,19 @@
-<div class="post-footer" id="post-bottom">
-    <hr class="post-divider">
-    <h1>Meta</h1>
-    <p>
-        <h4>Posted</h4>
-        <code><%= page.date %></code>
-    </p>
-    
-    <p>
-        <h4>Permalink</h4>
-        <a class="mono-font" href="<%= page.permalink %>"><%= page.permalink %></code></a> (<a href="javascript:copy('<%= page.permalink %>');">Copy</a>)
-    </p>
-</div>
+<hr class="post-divider">
+<h1>Meta</h1>
+<p>
+    Posted
+    <br>
+    <span class="mono-font"><%= page.date %></span>
+</p>
+
+<p>
+    Last updated
+    <br>
+    <span class="mono-font"><%= page.updated %></span>
+</p>
+
+<p>
+    Permalink
+    <br>
+    <a href="<%= page.permalink %>"><span class="mono-font"><%= page.permalink %></span></a>
+</p>
