@@ -1,5 +1,8 @@
-<h1><code><%= page.filename %></code></h1>
-<h2><a href="<%= page.filepath %>">Download</a></h2>
+<div class="download-container">
+    <h1><span class="mono-font"><%= page.filename %></span></h1>
+    <h2><a href="<%= page.filepath %>"><i class="icofont-download"></i> Download</a></h2>
+</div>
+
 <% if (page.content) { %>
-    <hr class="post-divider">   
+    <hr class="post-divider">
 <% } %>

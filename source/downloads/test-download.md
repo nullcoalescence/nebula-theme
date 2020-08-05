@@ -3,7 +3,7 @@ title: Test Download
 date: 2020-06-11 14:01:48
 layout: download
 filepath: https://www.google.com/file.txt
-filename: test-download.html
+filename: test.exe
 ---
 
 This is a test of the 'downloads' layout. To use it, do the following:

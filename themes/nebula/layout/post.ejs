@@ -1,7 +1,7 @@
 <div class="post-top">
     <h1 class="post-top--title"><%= page.title %></h1>
     <h2 class="post-top--subtitle"><%= page.subtitle %></h2>
-    <% if (page.author) { %> posted by <%= page.author %> <% } %>
+    <% if (page.author) { %><i class="icofont-ui-user"></i>  posted by <%= page.author %> <% } %>
     <% if (page.date) { %> on <%= page.date.format(config.date_format) %> <% } %>
 </div>
 

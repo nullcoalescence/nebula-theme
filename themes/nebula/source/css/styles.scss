@@ -1,34 +1,55 @@
 /*
 *   nebula - styles.scss
 *   Primary stylesheet
+*
+*   Configure variables below
 */
 
-/* 
-*   Variables 
+/*
+*   Variables
 */  
 
-/* Colors */
-$page--bg-color: black; /* #222831 7ebdb4 */
-$page--fg-color: white; 
+/* === Colors === */
+$page--bg-color: #232931;
+$page--fg-color: #eeeeee;
 
-$text-selection--bg-color: #3285a8;
+/* When user highlights text */
+$text-selection--bg-color: #4ecca3;
+$text-selection--fg-color: #eeeeee;
 
-$nav--bg-color: white;
-$nav--fg-color: black;
+/* Navigation bar */
+$nav--bg-color: #393e46;
+$nav--fg-color: #eeeeee;
 
-$accent-color: #3285a8;
-$link--fg-hover-color: white;
+/* Navigation menu slideout */
+$nav-content--bg-color: #393e46;
+$nav-content--fg-color: #eeeeee;
 
-$code--bg-color: black; 
+/* Applied to links in the page */
+$accent-color: #4ecca3;
+$link--fg-hover-color: #eeeeee;
 
-/* Fonts */
-$primary-font: "Vollkorn", sans-serif;
-$alt-font: "Arial", serif;
-$mono-font: monospace;
+/* Inline and block code snippets */
+$code--bg-color: black;
+$code--fg-color: #eeeeee;
+
+/* Sidebar used in posts */
+$sidebar--bg-color: #393e46;
+$sidebar--fg-color: #4ecca3;
+$sidebar--accent-color: #4ecca3;
+
+/* === Fonts === */
+$serif-font-stack: "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", "serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", serif;
+$sans-serif-font-stack: -apple-system, "BlinkMacSystemFont", "avenir next", "avenir", "helvetica neue", "helvetica", "Ubuntu", "roboto", "noto", "segoe ui", "arial", sans-serif;
+$monospace-font-stack: "Menlo", "Consolas", "Monaco", "Liberation Mono", "Lucida Console", "monospace";
+
+$primary-font: $sans-serif-font-stack;
+$alt-font: $serif-font-stack;
+$mono-font: $monospace-font-stack;
 
 
-/* 
-*   Root level styles 
+/*
+*   Root level styles
 */
 body, html {
   font-family: $primary-font;
@@ -41,7 +62,8 @@ body, html {
 *  Text selection
 */
 ::selection {
-  background-color: $text-selection--bg-color
+  background-color: $text-selection--bg-color;
+  color: $text-selection--fg-color;
 }
 
 /*
@@ -104,8 +126,8 @@ body, html {
   left: 0;
   height: 100%;
   width: 0;
-  background-color: $nav--bg-color;
-  color: $nav--fg-color;
+  background-color: $nav-content--bg-color;
+  color: $nav-content--fg-color;
   overflow-x: hidden;
   transition: 0.5s;
   opacity: .88;
@@ -147,18 +169,12 @@ body, html {
   line-height: 1.4;
 
   /* Center */
-  margin-left: 0 auto;
-  margin-right: 0 auto;
-  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 
   padding-left: 10px;
   padding-right: 10px;
 
-  /* If user is not using mobile device, show the full sidebar, meaning we have to adjust the margin */
-  @media only screen and (min-width: 768px) {
-    margin-right: 200px; /* Same as widebar width + sidebar horizontal padding */
-  }
-  
 }
 
 /* 
@@ -173,6 +189,7 @@ code {
   font-family: $mono-font;
   overflow-x: auto;  
   background-color: $code--bg-color;
+  color: $code--fg-color;
   padding: 3px;
   border-radius: 3px;
 }
@@ -235,15 +252,18 @@ code {
     right: 0;
     z-index: 1;
     opacity: .9;
-    color: $nav--fg-color;
+    color: $sidebar--fg-color;
+    background-color: $sidebar--bg-color;
     overflow-x: hidden;
-    overflow-y: hidden;
-    padding-top: 50px;
+    overflow-y: auto;
+    margin-bottom: 50px;
     width: 180px;
     height: 100%;
     padding-right: 20px;
+    padding-left: 20px;
   }
 
+  /* On mobile, we currently just hide the sidebar and don't provide a mobile-friendly replacement @todo */
   @media only screen and (max-width: 768px) {
     display: none;
   }
@@ -251,14 +271,14 @@ code {
 }
 
 .post-sidebar > h3 {
-  color: $page--fg-color;
+  color: $sidebar--fg-color
 }
 
 .post-sidebar--link {
   font-size: 150%;
   display: block;
   padding: 50px;
-  color: $accent-color;
+  color: $sidebar--accent-color;
   transition: .3s;
 }
 
@@ -290,7 +310,7 @@ code {
 }
 
 /* 
-*   Code blocks (bear in mind they are formatted with highlighting.js markup) 
+*   Code blocks (bear in mind they are formatted with highlighting.js markup)
 */
 
 /* Allow horizontal scrollbars (usually on mobile) when needed. .highlight class grabs the whole snippet */
@@ -300,6 +320,7 @@ code {
   padding-bottom: 10px; /* adding the 'copy code' button in site.js gives these a scrollbar, so pad the bottom so no ugly scrollbars show */
   border-radius: 5px;
   background-color: $code--bg-color;
+  color: $code--fg-color;
   font-family: $mono-font !important;
 }
 
@@ -348,6 +369,7 @@ code {
 
 .copy-code-btn {
   font-weight: bold;
+  border: 1px solid $code--fg-color;
 }
 
 /*
@@ -376,11 +398,42 @@ blockquote > footer > cite::after {
 }
 
 /*
+* Downloads page
+*/
+.download-container {
+  text-align: center;
+}
+
+/*
+* Project page
+*/
+.project-container {
+  text-align: center;
+}
+
+/*
 * Sharing buttons (displays in a vertical dialog)
 */
 .share-ui {
   
 }
+
+
+/*
+*   Utility classes
+*/
+.primary-font {
+  font-family: $primary-font;
+}
+
+.alt-font {
+  font-family: $alt-font;
+}
+
+.mono-font {
+  font-family: $mono-font;
+}
+
 
 /* sharingbuttons.io css */
 .resp-sharing-button__link,
@@ -631,20 +684,4 @@ color: white;
   background-color: #3a80c1;
   border-color: #3a80c1;
   color: white;
-}
-
-
-/*
-*   Utility classes
-*/
-.primary-font {
-  font-family: $primary-font;
-}
-
-.alt-font {
-  font-family: $alt-font;
-}
-
-.mono-font {
-  font-family: $mono-font;
 }

@@ -15,6 +15,9 @@
         <% if (page.layout === "download") { %>
             <%- partial("_partials/layouts/download.ejs") %>
         <% } %>
+        <% if (page.layout === "project") { %>
+            <%- partial("_partials/layouts/project.ejs") %>
+        <% } %>
         <%- body %>
     </div>
 

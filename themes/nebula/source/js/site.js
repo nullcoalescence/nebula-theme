@@ -32,12 +32,33 @@ window.onload = function() {
             var text = headers[i].textContent;
             // do some basic regex to get the #anchor url, add '#', remove spaces and replace them with dashes, and remove () and other symbols
             var url = "#" + text.replace(/\s+/g, "-");
-            url = url.replace(",", "");
+            url = url.replace("([A-Za-z0-9\-\_]+)", "");
+            // @TODO
             url = url.replace("(", "");
             url = url.replace(")", "");
+            url = url.replace("!", "");
             url = url.replace("?", "");
+            url = url.replace(",", "");
+            url = url.replace(".", "");
+            url = url.replace(";", "");
+            url = url.replace(":", "");
             document.getElementById("post-sidebar--post-headers").innerHTML += "<li><a href='javascript:jumpTo(\"" + url + "\")'>" + text + "</a></li>";
         }
+    }
+
+    // If we are on a 'post', indicated by the sidebar, then run a media query to see if user is on a desktop.
+    // If so, add margin-right to .page-center. Have to do this in JS since we have to detect if we are on a post first
+    // Otherwise, all other pages on this site would have a weird right margin
+    if (document.getElementById("post-sidebar")) {
+        var mediaQuery = window.matchMedia("(min-width: 768px)");
+        if (mediaQuery.matches) {
+            document.getElementsByClassName("page-center")[0].style.marginRight = "200px";
+        }
+    }
+
+    // If we are on the archives page, modify the header based on weather user is browsing archives or all posts of a certain tag
+    if (document.getElementById("archives-header")) {
+        modifyArchivesPageHeader();
     }
 
 }
@@ -48,6 +69,8 @@ function jumpTo(jumpHash) {
     var el = document.getElementById(jumpHash.split("#")[1]);
     var scrollPos = el.offsetTop - 40;
     window.scrollTo(0, scrollPos);
+    // Animation
+
     // Set hash (with fallback) to reflect the page jump
     if (history.pushState) {
         history.pushState(null, null, jumpHash);
@@ -80,5 +103,17 @@ function toggleNav() {
     } else {
         document.getElementById("navbar--content").style.width = "300px";
         navOpen = true;
+    }
+}
+
+// Modifies header of the page. By default it is 'Archives', but if user is on /tags/my-tag, we don't want the header to show 'arcives'
+function modifyArchivesPageHeader() {
+    var url = window.location.href;
+    if (url.includes("tags")) {
+        document.getElementById("archives-header").innerHTML = "Tags";
+    } else if (url.includes("categories")) {
+        document.getElementById("archives-header").innerHTML = "Categories"
+    } else {
+        document.getElementById("archives-header").innerHTML = "Archives";
     }
 }

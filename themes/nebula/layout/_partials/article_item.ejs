@@ -15,6 +15,26 @@
         <% if (article.author) { %>
             <span class="alt-font"><i class="icofont-pencil"></i>by </span> <%- article.author %></span>
         <% } %>
+        <br>
+        <% if (article.tags && article.tags.length) { %>
+            <i class="icofont-tag"></i> Tagged as:
+            <%- list_tags(article.tags, {
+                show_count: false,
+                class: "post-meta--tag",
+                style: "none",
+                seperator: ","
+            }) %>
+        <% } %>
+        <br>
+        <% if (article.categories && article.categories.length) { %>
+            <i class="icofont-folder-open"></i> Posted in:
+            <%- list_tags(article.categories, {
+                show_count: false,
+                class: "post-meta--category",
+                style: "none",
+                seperator: ","
+            }) %>
+        <% } %>
     </p>
 
     <% if (article.excerpt) { %>
