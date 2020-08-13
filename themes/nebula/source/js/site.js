@@ -56,7 +56,7 @@ window.onload = function() {
         }
     }
 
-    // If we are on the archives page, modify the header based on weather user is browsing archives or all posts of a certain tag
+    // If we are on the archives page, modify the header based on wether user is browsing archives or all posts of a certain tag
     if (document.getElementById("archives-header")) {
         modifyArchivesPageHeader();
     }

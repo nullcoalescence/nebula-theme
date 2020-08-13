@@ -252,7 +252,6 @@ code {
     right: 0;
     z-index: 1;
     opacity: .9;
-    color: $sidebar--fg-color;
     background-color: $sidebar--bg-color;
     overflow-x: hidden;
     overflow-y: auto;
@@ -271,7 +270,7 @@ code {
 }
 
 .post-sidebar > h3 {
-  color: $sidebar--fg-color
+  color: $page--fg-color;
 }
 
 .post-sidebar--link {
@@ -489,16 +488,6 @@ blockquote > footer > cite::after {
   color: white;
 }
 
-.resp-sharing-button--pinterest {
-  background-color: #bd081c;
-  color: white;
-}
-
-.resp-sharing-button--pinterest:hover {
-  background-color: #8c0615;
-  color: white;
-}
-
 .resp-sharing-button--facebook {
   background-color: #3b5998;
   color: white;
@@ -644,19 +633,6 @@ color: white;
 .resp-sharing-button--email:active {
   background-color: #5e5e5e;
   border-color: #5e5e5e;
-  color: white;
-}
-
-.resp-sharing-button--pinterest {
-  background-color: #bd081c;
-  border-color: #bd081c;
-  color: white;
-}
-
-.resp-sharing-button--pinterest:hover,
-.resp-sharing-button--pinterest:active {
-  background-color: #8c0615;
-  border-color: #8c0615;
   color: white;
 }
 

@@ -4,27 +4,23 @@
 
 # Theme for highlight.js
 # Include ONE OR THE OTHER - a local theme, or a theme hosted on a CDN
-hljs_theme_local: "css/an_old_hope_hljs_local.css" # Path starts at /source/, so if you drop theme in source/css, the path looks like "css/theme.css"
-hljs_theme_url: "http://jmblog.github.com/color-themes-for-highlightjs/css/themes/tomorrow.css" # Url (http://jmblog.github.com/color-themes-for-highlightjs/css/themes/tomorrow.css) 
+hljs_theme_local: "" # Path starts at /source/, so if you drop theme in source/css, the path looks like "css/theme.css"
+hljs_theme_url: "" # Url (http://jmblog.github.com/color-themes-for-highlightjs/css/themes/tomorrow.css)
 
-# Site title
-site_title: "example.com"
+# Site info
 meta_theme_color:
 favicon_path:
-global_title: Title
 google_analytics_tracking_id:
 
 # Links for navbar
 navbar_links:
   Home: /
-  About: /about
-  Hire Me: /hire-me
 
 # Comments (via https://utteranc.es/)
 # Setup some comments for your site on that webpage, then enter the info here.
 # Comments appear on all posts - to disable them, set the first option below 'comments_enabled' to false
 comments_enabled: true
-comments_repo: "ovsiew/utterances-test" # Repo utterance comments are tied to
-comments_issue_term: "pathname" # pathname, url, title, og:title, etc
-comments_label: "Comment" # descriptive text
-comments_theme: "github-dark" # github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark
+comments_repo: "" # Repo utterance comments are tied to
+comments_issue_term: "" # pathname, url, title, og:title, etc
+comments_label: "" # descriptive text
+comments_theme: "" # github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark
