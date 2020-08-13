@@ -11,7 +11,6 @@ Features:
 - Icon font (https://icofont.com/)
 - Sidebar with quick navigations for those long blog posts
 - Mobile compatible
-- 
 
 ## Table of Contents
 - [nebula](#nebula)
