@@ -19,6 +19,7 @@ Features:
   - [Configure](#configure)
   - [Different Pages](#different-pages)
   - [Grunt scripts](#grunt-scripts)
+  - [Credits](#credits)
 
 ## Install
 ```
@@ -33,7 +34,7 @@ $ grunt build #Runs 'hexo generate' & 'hexo serve'
 ```
 
 ## Configure
-After installing theme and dependencies, open the 'my_site' folder you installed to, and navigate to `/themes/nebula/'... Everything you want to configure is in here.
+After installing theme and dependencies, open the ```my_site``` folder you installed to, and navigate to ```/themes/nebula/```... Everything you want to configure is in here.
 
 1. ```css/styles.scss```: The main stylesheet for your site is generated from here. At the top, there are a bunch of documented variables for you to configure, incuding colors and font-stacks.
 2. ```_config.yml```: The config file for this Hexo theme is located here. Here you are going to want to configure the following
@@ -80,3 +81,9 @@ After writing some content for your site, you'll want to generate the HTML. I've
 - ```grunt build```: Runs 'hexo generate' and 'hexo serve'. Generates site for preview at http://localhost:4000
 - ```grunt production```: Generates site for production. Minifies HTML/CSS/JS. Resulting generated site is located in ```/public```
 - ```grunt clean```: Runs 'hexo clean'
+
+## Credits
+I've used these things in this theme:
+- [normalize.css](https://necolas.github.io/normalize.css/)
+- [ICO Font](https://icofont.com/)  
+- [utteranc.es](https://utteranc.es/)
