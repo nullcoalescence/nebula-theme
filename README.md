@@ -44,6 +44,7 @@ After installing theme and dependencies, open the ```my_site``` folder you insta
     - ```meta_theme_color```: Theme color used in ```<meta name='theme-color' value='...'>```
     - ```favicon_path```: Path to favicon. Relative to site root
     - ```google_analytics_tracking_id```: Tracking ID for Google Analytics
+    - ```global_title```: Used throughout the site as <title>
     - ```navbar_links```: Links and their titles to integrate into navbar.
         ```
         navbar_links:
