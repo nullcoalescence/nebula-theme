@@ -1,6 +1,6 @@
 # nebula
 
-Hexo theme made for my site, https://ben.bike.
+Hexo theme made for my site
 
 Features:
 - Customizable SCSS
